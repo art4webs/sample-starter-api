@@ -18,7 +18,6 @@ class User
 
     /**
      * @MongoDB\Field(type="string")
-     * @MongoDB\UniqueIndex
      *
      * @Serializer\Expose()
      * @Serializer\Groups({"List"})
