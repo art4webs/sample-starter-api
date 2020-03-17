@@ -1,0 +1,54 @@
+{
+  "paging": {
+    "current_page": 1,
+    "items_per_page": 20,
+    "total_items": 5
+  },
+  "data": [
+    {
+      "id": "@string@",
+      "score": 2,
+      "finished_at": "@string@",
+      "user": {
+        "id": "@string@",
+        "name": "Nora Berry"
+      }
+    },
+    {
+      "id": "@string@",
+      "score": 100,
+      "finished_at": "@string@",
+      "user": {
+        "id": "@string@",
+        "name": "Kristina Byrd"
+      }
+    },
+    {
+      "id": "@string@",
+      "score": 5,
+      "finished_at": "@string@",
+      "user": {
+        "id": "@string@",
+        "name": "Scarlett Harvey"
+      }
+    },
+    {
+      "id": "@string@",
+      "score": 20,
+      "finished_at": "@string@",
+      "user": {
+        "id": "@string@",
+        "name": "Erica Harmon"
+      }
+    },
+    {
+      "id": "@string@",
+      "score": 5,
+      "finished_at": "@string@",
+      "user": {
+        "id": "@string@",
+        "name": "Leona Everett"
+      }
+    }
+  ]
+}

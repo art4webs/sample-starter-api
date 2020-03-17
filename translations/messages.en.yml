@@ -1,0 +1,6 @@
+error_response:
+  internal_server_error:
+    title: Service unavailable
+    detail: Try later, if problem will still exists contact with administrator.
+  invalid_request_parameter:
+    title: Invalid request paremeters

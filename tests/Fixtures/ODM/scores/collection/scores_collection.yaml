@@ -1,0 +1,11 @@
+App\Document\User:
+  user_{1..30}:
+    name: <firstName()> <lastName()>
+    uuid: <uuid()>
+
+App\Document\Score:
+  score_{1..30}:
+    score: <numberBetween(1, 100)>
+    finished_at: <dateTimeBetween("-10 days", "now")>
+    uuid: <uuid()>
+    user: '@user_<current()>'

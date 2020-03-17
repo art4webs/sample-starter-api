@@ -1,0 +1,43 @@
+App\Document\User:
+  user_1:
+    name: Leona Everett
+    uuid: <uuid()>
+  user_2:
+    name: Erica Harmon
+    uuid: <uuid()>
+  user_3:
+    name: Nora Berry
+    uuid: <uuid()>
+  user_4:
+    name: Kristina Byrd
+    uuid: <uuid()>
+  user_5:
+    name: Scarlett Harvey
+    uuid: <uuid()>
+
+App\Document\Score:
+  score_1:
+    score: 5
+    finished_at: <dateTimeBetween("-10 days", "-9 days")>
+    uuid: <uuid()>
+    user: '@user_1'
+  score_2:
+    score: 20
+    finished_at: <dateTimeBetween("-8 days", "-7 days")>
+    uuid: <uuid()>
+    user: '@user_2'
+  score_3:
+    score: 2
+    finished_at: <dateTimeBetween("-2 days", "-1 days")>
+    uuid: <uuid()>
+    user: '@user_3'
+  score_4:
+    score: 100
+    finished_at: <dateTimeBetween("-4 days", "-3 days")>
+    uuid: <uuid()>
+    user: '@user_4'
+  score_5:
+    score: 5
+    finished_at: <dateTimeBetween("-6 days", "-5 days")>
+    uuid: <uuid()>
+    user: '@user_5'

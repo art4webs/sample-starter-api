@@ -4,6 +4,8 @@
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
+    env(MONGODB_URL): ''
+    env(MONGODB_DB): ''
 
 services:
     # default configuration for services in *this* file
@@ -25,3 +27,20 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+
+    SoftPassio\ApiExceptionBundle\Component\Factory\ApiProblemFactoryInterface:
+        class: App\Factory\ApiProblemFactory
+        arguments: ['@translator']
+
+    kernel.listener.response_listener:
+        class: App\EventListener\ResponseJsonListener
+        arguments:
+            $appEnv: '%env(APP_ENV)%'
+        tags:
+            - { name: kernel.event_listener, event: kernel.response, method: onKernelResponse }
+            - { name: kernel.event_listener, event: kernel.exception, method: onKernelException }
+
+    kernel.listener.format_listener:
+        class: App\EventListener\FormatListener
+        tags:
+            - { name: kernel.event_listener, event: kernel.request, method: onKernelRequest }
