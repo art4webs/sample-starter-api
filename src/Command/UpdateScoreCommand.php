@@ -23,7 +23,6 @@ class UpdateScoreCommand extends Command
 
     /**
      * @required
-     * @param ScoreFactory $scoreFactory
      */
     public function setScoreFactory(ScoreFactory $scoreFactory)
     {
@@ -32,7 +31,6 @@ class UpdateScoreCommand extends Command
 
     /**
      * @required
-     * @param ScoreVendorClient $scoreVendorClient
      */
     public function setClient(ScoreVendorClient $scoreVendorClient)
     {
@@ -58,5 +56,7 @@ class UpdateScoreCommand extends Command
         } catch (\Exception $exception) {
             $io->error($exception->getMessage());
         }
+
+        return 1;
     }
 }

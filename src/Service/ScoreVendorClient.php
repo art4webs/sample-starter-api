@@ -3,13 +3,14 @@
 namespace App\Service;
 
 use Symfony\Component\HttpClient\HttpClient;
+use Symfony\Contracts\HttpClient\HttpClientInterface;
 
 class ScoreVendorClient
 {
     private const API_URL = 'https://private-b5236a-jacek10.apiary-mock.com/results/games/1';
 
     /**
-     * @var HttpClient
+     * @var HttpClientInterface
      */
     private $client;
 
