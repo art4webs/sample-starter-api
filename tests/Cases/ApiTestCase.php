@@ -37,15 +37,10 @@ class ApiTestCase extends WebTestCase
     /** @var PurgerLoader */
     private $loader;
 
-    public function __construct(string $name = null, array $data = [], string $dataName = '')
-    {
-        parent::__construct($name, $data, $dataName);
-        $this->dataFixturesPath = __DIR__.'/../Fixtures/ODM';
-        $this->expectedResponsesPath = __DIR__.'/../Responses/Expected';
-    }
-
     protected function setUp(): void
     {
+        $this->dataFixturesPath = __DIR__.'/../Fixtures/ODM';
+        $this->expectedResponsesPath = __DIR__.'/../Responses/Expected';
         $this->client = static::createClient();
 
         $this->setUpDatabase();

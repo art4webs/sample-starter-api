@@ -14,7 +14,7 @@
         "knplabs/knp-paginator-bundle": "^5.1",
         "mongodb/mongodb": "^1.6",
         "nelmio/api-doc-bundle": "^3.6",
-        "soft-passio/api-exception-bundle": "^2.0",
+        "soft-passio/api-exception-bundle": "2.1.1",
         "soft-passio/components": "2.0",
         "symfony/asset": "4.4.*",
         "symfony/console": "4.4.*",
@@ -67,7 +67,7 @@
     },
     "scripts": {
         "phpstan": "vendor/bin/phpstan analyse src --level=3",
-        "tests": "./vendor/bin/simple-phpunit",
+        "tests": "php -d display_errors=on ./vendor/bin/phpunit --configuration ./phpunit.xml --teamcity",
         "ci": [
             "@tests",
             "@phpstan"
